@@ -1,0 +1,5 @@
+transition:transform 5s ease;
+
+for transition timming function we can also use cubic-bezier function
+from cubic-bezier.com and use it instead of the ease and other pre given 
+function .

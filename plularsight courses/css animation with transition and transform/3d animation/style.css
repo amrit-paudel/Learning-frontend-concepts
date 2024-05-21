@@ -1,0 +1,42 @@
+
+
+/* HERE WE WILL MAKE OUR LAYOUT RESPONSIVE BUT WE WILL GO FROM SMALL TO LARGE , FIRST WE WILL MAKE FOR SMALL SCREEN AND THEN WE WILL MAKE IT FOR THE LARGE SCREEN .  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-image: linear-gradient(120deg,rgb(139, 139, 75),rgb(97, 97, 40));
+    color: white;
+    min-width: 400px;max-width: 2000px;                                                             /* they are like super super important properties */
+    margin: 0 0.5rem;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: #333333;
+    margin: 2rem 2rem;
+}
+.rotateX{
+    transition: transform 2s ease;
+    perspective: 800px;
+}
+
+.rotateX:hover{
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+}
+.translate{
+transition: transform 1s ease;
+}
+.translate:hover{
+    transform: translateX(40px) translateY(40px) translateZ(80px);
+}
+
+.scale3d{
+    transition: transform 2s ease;
+}
+.scale3d:hover{
+    transform: scaleX(1.5) scaleY(1.5) ;
+}

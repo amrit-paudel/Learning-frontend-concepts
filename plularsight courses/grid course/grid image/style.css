@@ -1,0 +1,39 @@
+
+
+/* HERE WE WILL MAKE OUR LAYOUT RESPONSIVE BUT WE WILL GO FROM SMALL TO LARGE , FIRST WE WILL MAKE FOR SMALL SCREEN AND THEN WE WILL MAKE IT FOR THE LARGE SCREEN .  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-image: linear-gradient(120deg,rgb(139, 139, 75),rgb(97, 97, 40));
+    color: white;
+    min-width: 400px;max-width: 2000px;                                                             /* they are like super super important properties */
+    margin: 0 0.5rem;
+}
+img{
+    display: block;
+    width: 100%;height: 100%;
+    object-fit: cover;                                                                                 /* MAIN PART */
+}
+.grid{
+    display: grid;grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 0.7rem;
+}
+ .grid div{
+     display: grid;align-items: center;justify-items: center;
+     grid-column: auto/span 2;
+     grid-row: auto/span 2;
+ }
+ .grid div.landscape{
+     grid-column: auto/span 4;
+     grid-row: auto/span 4;
+ }
+ .grid div.vertical{
+    grid-column: auto/span 2;
+    grid-row: auto/span 4;
+}

@@ -1,0 +1,20 @@
+.firstpage{
+    background-color: khaki;
+    width: 100%;
+    height: 100vh;
+}
+.article{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+}
+.article>*{
+    grid-column: 2;
+    min-width: 0;
+}
+.article>h2{
+    grid-column:2 ;
+}
+.article>.para{
+    grid-column: 3; /* but by this a gap will be created between this andit's below element . and currently there's no any solutions for this .*/
+}
+

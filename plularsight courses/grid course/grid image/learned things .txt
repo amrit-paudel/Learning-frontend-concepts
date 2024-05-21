@@ -1,0 +1,19 @@
+making grid by grid items of perfect square 
+spanning nicely
+using 
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}                         is very crucial, otherwise don't work properly
+
+let say we use like
+img{
+   display:block;
+   max-width:100%;               it won't work, and is almost impossible to style and fit nicely to grid.
+}
+
+and creation of nice grid is very very important, all the grid cells must be square or close to square...
+like.....
+grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+grid-auto-rows:100px;

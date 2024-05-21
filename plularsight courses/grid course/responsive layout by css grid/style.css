@@ -1,0 +1,61 @@
+
+
+/* HERE WE WILL MAKE OUR LAYOUT RESPONSIVE BUT WE WILL GO FROM SMALL TO LARGE , FIRST WE WILL MAKE FOR SMALL SCREEN AND THEN WE WILL MAKE IT FOR THE LARGE SCREEN .  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-image: linear-gradient(120deg,rgb(139, 139, 75),rgb(97, 97, 40));
+    color: white;
+    min-width: 400px;max-width: 2000px;                                                             /* they are like super super important properties */
+    margin: 0 0.5rem;
+}
+body{
+    display: grid;
+    grid-template:  
+    'header' 70px
+    'aside'  150px
+    'nav'    150px
+    'main'   250px
+    'footer' 70px /1fr    
+    ;
+    grid-gap: 0.5rem;
+
+}
+body >*{
+    border: solid white;
+    display: grid;justify-items:center;align-items: center;
+
+}
+.header{grid-area: header;}
+.aside{grid-area: aside;}
+.nav{grid-area: nav;}
+.main{grid-area: main;}
+.footer{grid-area: footer;}
+
+@media(min-width:600px){
+    body{
+        display: grid;
+        grid-template:  
+        'header header' 70px
+        'nav main' 40vh
+        'aside main' 40vh
+        'footer footer' 70px / 1fr 2fr
+        ;
+    }
+}
+
+@media(min-width:900px){
+    body{
+        display: grid;
+        grid-template:  
+        'header header header' 70px
+        'nav main aside'  40vh
+        'nav main aside' 40vh
+        'footer footer footer' 70px / 1fr 2fr 1fr
+        ;
+    }
+}

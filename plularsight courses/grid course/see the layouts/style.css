@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-image: linear-gradient(120deg,rgb(139, 139, 75),rgb(97, 97, 40));
+    color: white;
+}
+li{
+    list-style: none;
+}
+h3,h4{
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+/* STYLLING THE NAV BAR */
+nav{
+    border: solid 1.2px white;
+    display: flex;align-items: center;justify-content: flex-start;                                              /* try out this one by the css grid */
+    width: 100%;height: 60px;
+}
+nav li{
+    margin: 0 1rem;
+}
+
+
+
+/*STYLLING AND MAKING THE BODY TEMPLATE*/
+
+.main-content{
+    display: grid;width: 100%;height: 80vh;
+    grid-template:  
+    'left center right' 100%/1fr 2fr 1fr
+    ;
+}
+aside.left{
+    display: grid;
+    grid-area: left;
+    border: solid 1.2px white;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+aside.left > *{
+    border: solid 1.2px white;
+    display: grid;justify-items: flex-start;align-items: center;
+    padding-left: 1.5rem;
+}
+aside.left .logo{
+    justify-items: center;
+}
+
+main{
+    grid-area: center;
+    border: solid 1.2px white;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+main > div{
+    border: solid 1.2px white;
+    padding-left: 1.5rem;
+    display: grid;justify-items: center;align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+main > div >div.image{
+  width: 100px;height: 100px;border: solid 1.2px white;
+}
+
+aside.right{
+    grid-area: right;
+    border: solid 1.2px white;
+    display: grid;justify-items: center;align-items: center;
+}
+
+footer{
+    display: grid;justify-items: center;align-items: center;
+    grid-template-rows: repeat(2,1fr);
+    padding: 3rem 0;
+}
+
+@media(max-width:800px){
+    .main-content{
+        display: grid;width: 100%;height:auto;
+        grid-template:
+        'left' 1fr
+        'center' 2fr
+        'right' 1fr/1fr
+        ;
+    }
+
+    aside.left{
+        height: 50vh;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    aside.left form{
+        display: flex;flex-direction: column;
+        align-items: center;justify-content:center;
+    }
+
+}

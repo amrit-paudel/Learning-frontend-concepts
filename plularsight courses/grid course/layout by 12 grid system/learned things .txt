@@ -1,0 +1,10 @@
+we create 12 grids by 
+grid-template-columnsrepeat(12,1fr);
+ the rows are as per the content.
+
+i.e grid-auto-rows:min-content;
+  means the rows are as small as possible to fit the content inside
+ 
+by this we can set the desired height of the each item
+and as per the min-content the item will fit nicely.
+

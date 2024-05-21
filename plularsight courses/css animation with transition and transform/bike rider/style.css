@@ -1,0 +1,35 @@
+
+
+/* HERE WE WILL MAKE OUR LAYOUT RESPONSIVE BUT WE WILL GO FROM SMALL TO LARGE , FIRST WE WILL MAKE FOR SMALL SCREEN AND THEN WE WILL MAKE IT FOR THE LARGE SCREEN .  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-image: linear-gradient(120deg,rgb(139, 139, 75),rgb(97, 97, 40));
+    color: white;
+    min-width: 400px;max-width: 2000px;                                                             /* they are like super super important properties */
+    margin: 0 0.5rem;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+.road{
+    width: 100%;position: relative;height: 100vh;
+    
+}
+.rider{
+    width: 200px;
+    
+    position: relative;
+    top:10rem;
+    transition: transform 4s ease;
+}
+
+.road:hover>.rider{
+    transform: translateX(1700px);
+}
